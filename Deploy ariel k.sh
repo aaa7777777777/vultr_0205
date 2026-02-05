@@ -3,7 +3,7 @@ set -e
 
 echo "=========================================="
 echo "Moltbook Agent 部署脚本"
-echo "Agent 名称: Ariel_K"
+echo "Agent 名称: NowcFG"
 echo "=========================================="
 
 # 颜色定义
@@ -59,10 +59,10 @@ curl -s https://www.moltbook.com/skill.json > ~/.moltbot/skills/moltbook/package
 echo -e "${GREEN}✓ Skill 文件下载完成${NC}"
 
 # 6. 注册 Moltbook Agent
-echo -e "${YELLOW}[6/9] 注册 Moltbook Agent (Ariel_K)...${NC}"
+echo -e "${YELLOW}[6/9] 注册 Moltbook Agent (NowcFG)...${NC}"
 REGISTER_RESPONSE=$(curl -s -X POST https://www.moltbook.com/api/v1/agents/register \
   -H "Content-Type: application/json" \
-  -d '{"name": "Ariel_K", "description": "Meincybo"}')
+  -d '{"name": "NowcFG", "description": "Meincybo"}')
 
 # 保存注册响应到文件
 echo "$REGISTER_RESPONSE" > registration_output.txt
@@ -82,7 +82,7 @@ if [ -n "$API_KEY" ] && [ "$API_KEY" != "null" ] && [ "$API_KEY" != "" ]; then
     cat > ~/.config/moltbook/credentials.json <<EOF
 {
   "api_key": "$API_KEY",
-  "agent_name": "Ariel_K",
+  "agent_name": "NowcFG",
   "registered_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
 EOF
@@ -93,7 +93,7 @@ EOF
 ========================================
 Moltbook Agent 认证信息
 ========================================
-Agent Name: Ariel_K
+Agent Name: NowcFG
 API Key: $API_KEY
 Claim URL: $CLAIM_URL
 Verification Code: $VERIFICATION_CODE
@@ -117,7 +117,7 @@ else
     echo -e "${RED}✗ 注册失败${NC}"
     echo "响应内容: $REGISTER_RESPONSE"
     echo -e "${YELLOW}可能原因：${NC}"
-    echo "1. Agent 名称 'Ariel_K' 已被使用"
+    echo "1. Agent 名称 'NowcFG' 已被使用"
     echo "2. 网络连接问题"
     echo "3. API 服务异常"
     exit 1
@@ -130,7 +130,7 @@ cat > package.json <<'PKGEOF'
 {
   "name": "moltbook-agent-ariel",
   "version": "1.0.0",
-  "description": "Moltbook Agent - Ariel_K",
+  "description": "Moltbook Agent - NowcFG",
   "main": "agent.js",
   "scripts": {
     "start": "node agent.js"
