@@ -3,7 +3,7 @@ set -e
 
 echo "=========================================="
 echo "Moltbook Agent 部署脚本"
-echo "Agent 名称: Curiosilly"
+echo "Agent 名称: Curiosilly1"
 echo "=========================================="
 
 # 颜色定义
