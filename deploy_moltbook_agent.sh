@@ -77,7 +77,7 @@ if [ "$API_KEY" != "null" ] && [ -n "$API_KEY" ]; then
     cat > ~/.config/moltbook/credentials.json <<EOF
 {
   "api_key": "$API_KEY",
-  "agent_name": "Curiosilly",
+  "agent_name": "Curiosilly1",
   "registered_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
 EOF
@@ -116,7 +116,7 @@ cat > package.json <<'EOF'
 {
   "name": "moltbook-agent",
   "version": "1.0.0",
-  "description": "Moltbook Agent - Curiosilly",
+  "description": "Moltbook Agent - Curiosilly1",
   "main": "agent.js",
   "scripts": {
     "start": "node agent.js"
